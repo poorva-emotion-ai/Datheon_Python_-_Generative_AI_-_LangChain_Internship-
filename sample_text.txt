@@ -1,0 +1,3 @@
+Computer Vision Notes
+Computer vision enables computers to interpret images and videos.
+Applications include object detection, image classification, and facial recognition.
