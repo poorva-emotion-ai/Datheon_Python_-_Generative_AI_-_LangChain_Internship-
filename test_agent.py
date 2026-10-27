@@ -1,11 +1,20 @@
+
 from agent import student_agent
 
-print("Testing Quiz generation...")
+print("StudyPilot AI Agent")
+print("Type 'exit' to quit.")
 
-result=student_agent.run(
-      "generate 5 mcq question from the topic open cv."
-      "Follow thw exact format given by quiz generator tool." 
-)
+while True:
+    question = input("\nYou: ").strip()
 
-print("\nQuiz output")
-print(result)
+    if question.lower() == "exit":
+        break
+
+    if not question:
+        continue
+
+    try:
+        answer = student_agent.run(question)
+        print("\nAgent:", answer)
+    except Exception as e:
+        print("\nAgent error:", e)
